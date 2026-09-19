@@ -1,0 +1,6 @@
+official_repo: third_party/fast_eval_Parkinsonism
+manifest: data/test_manifest.csv
+video_root: data/test_videos
+results_dir: results
+seed: 42
+allow_short_videos: true

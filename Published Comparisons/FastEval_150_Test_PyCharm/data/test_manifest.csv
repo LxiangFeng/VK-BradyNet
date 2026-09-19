@@ -1,0 +1,4 @@
+filename,label,patient_id,side
+FT_0001.mp4,0,P001,Left
+FT_0002.mp4,1,P002,Right
+FT_0003.mp4,2,P003,Left

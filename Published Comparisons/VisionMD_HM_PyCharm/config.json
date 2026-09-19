@@ -1,0 +1,21 @@
+{
+  "task": "HM",
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "expected_split_sizes": {
+    "train": 1560,
+    "val": 195,
+    "test": 195
+  },
+  "patient_id_regex": "^([^_]+)",
+  "norm_strategy": "INDEXSIZE",
+  "max_missing_fraction": 0.1,
+  "visionmd_repo_url": "https://github.com/mea-lab/VisionMD-DesktopApp.git",
+  "hand_model_url": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+  "random_state": 42,
+  "primary_metric": "exact_accuracy",
+  "model_selection_metric": "macro_f1"
+}

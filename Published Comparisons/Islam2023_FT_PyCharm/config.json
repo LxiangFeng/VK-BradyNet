@@ -1,0 +1,13 @@
+{
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "patient_id_regex": "^([^_]+)",
+  "official_repo_url": "https://github.com/ROC-HCI/finger-tapping-severity.git",
+  "random_state": 42,
+  "rounding": "half_up_after_clip_0_2",
+  "primary_metric": "exact_accuracy",
+  "recommended_training_mode": "val_tune"
+}

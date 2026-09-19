@@ -1,0 +1,14 @@
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+scikit-learn==1.5.1
+opencv-python==4.10.0.84
+mediapipe==0.10.14
+matplotlib==3.9.1
+seaborn==0.13.2
+statsmodels==0.14.2
+smogn==0.1.2
+lightgbm==4.5.0
+joblib==1.4.2
+PyYAML==6.0.2
+tqdm==4.66.5
