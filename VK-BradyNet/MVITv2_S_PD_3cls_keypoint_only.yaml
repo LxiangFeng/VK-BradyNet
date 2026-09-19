@@ -1,0 +1,59 @@
+# MVITv2_S_PD_3cls_keypoint_only.yaml
+# Ablation Experiment 2: Keypoint-only baseline.
+# Uses the same split, optimizer, schedule, epochs and evaluation protocol as full model.
+
+TRAIN:
+  ENABLE: True
+  DATASET: csv
+  CHECKPOINT_FILE_PATH: "C:/Users/Mona/Desktop/slowfast/checkpoints/MViTv2_S_16x4_k400.pyth"
+  CHECKPOINT_TYPE: pytorch
+
+DATA:
+  PATH_TO_DATA_DIR: "C:/Users/Administrator/Desktop/data/data"
+  NUM_FRAMES: 16
+  SAMPLING_RATE: 4
+  TRAIN_JITTER_SCALES: [224, 256]
+  TRAIN_CROP_SIZE: 224
+  TEST_CROP_SIZE: 224
+  INPUT_CHANNEL_NUM: [3]
+
+MODEL:
+  MODEL_NAME: KeypointOnly
+  ARCH: mvit
+  NUM_CLASSES: 3
+  DROPOUT_RATE: 0.7
+  LOSS_FUNC: cross_entropy
+
+FUSION:
+  ENABLE: False
+  EMBED_DIM: 128
+  ENCODER: transformer
+  DROPOUT: 0.3
+  FUSION_DROPOUT: 0.6
+
+  KEYPOINT_DIM: 10
+  NUM_KEYPOINTS: 21
+  KEYPOINT_NUM_FRAMES: 16
+
+  NUM_HEADS: 4
+  NUM_LAYERS: 2
+
+  GATED_FUSION: False
+  SPEED_ATTENTION: False
+  SPEED_ATTENTION_ALPHA: 10.0
+
+SOLVER:
+  BASE_LR: 0.000003
+  MAX_EPOCH: 30
+  WARMUP_EPOCHS: 3.0
+  WARMUP_START_LR: 0.0000003
+  COSINE_END_LR: 0.0000003
+  OPTIMIZING_METHOD: adamw
+  WEIGHT_DECAY: 0.1
+
+TRAIN:
+  BATCH_SIZE: 2
+  MIXED_PRECISION: True
+  EVAL_PERIOD: 1
+
+OUTPUT_DIR: "./outputs/PD_MVITv2_S_KEYPOINT_ONLY"
